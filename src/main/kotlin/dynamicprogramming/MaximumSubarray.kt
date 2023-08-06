@@ -36,5 +36,5 @@ class MaximumSubarray {
 //Solution
 /**
  * @Time_Complexity: O(n) linear time. We are making one pass through the array with no stops. We are using a variable
- * to keep track of the maximum sum by
+ * to keep track of the maximum sum by comparing the maximum sum variable to itself and the current aggregate sum.
  */
