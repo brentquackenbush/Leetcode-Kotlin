@@ -32,3 +32,23 @@ By using dynamic programming, we reduced the time complexity of the problem from
 ## Conclusion:
 
 Dynamic programming is a powerful technique that turns problems that might be intractable (due to time complexity) using naive methods into problems that can be solved efficiently. It's particularly useful in optimization problems where you're looking for the best possible solution among a set of possibilities.
+
+## What are the different types of dynamic programming problems to look out for?
+
+1. **0/1 Knapsack**: This is a classic problem where you're given a set of items, each with a weight and a value, and a maximum weight capacity. The goal is to determine the maximum value you can carry in the knapsack without exceeding the weight capacity. The "0/1" part means that you can either take an item or leave it (you can't break it into smaller parts). This problem can be solved using dynamic programming by creating a 2D table where the rows represent items and the columns represent weight capacities. Each cell in the table represents the maximum value that can be achieved with the given items and weight capacity.
+
+2. **Unbounded Knapsack**: This is a variant of the knapsack problem where you can take an unlimited number of each item. It can be solved in a similar way to the 0/1 knapsack problem, but you need to consider the possibility of taking each item multiple times.
+
+3. **Longest Common Subsequence (LCS)**: Given two sequences, the goal is to find the length of the longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. This problem can be solved using dynamic programming by creating a 2D table where the cell at the ith row and jth column represents the length of the LCS of the first i characters of the first sequence and the first j characters of the second sequence.
+
+4. **Longest Increasing Subsequence (LIS)**: Given a sequence of numbers, the goal is to find the length of the longest subsequence where each element is greater than the previous one. This problem can be solved using dynamic programming by creating an array where the ith element represents the length of the LIS ending at the ith element of the input sequence.
+
+5. **Edit Distance**: Given two strings, the goal is to find the minimum number of operations (insertions, deletions, and substitutions) required to transform one string into the other. This problem can be solved using dynamic programming by creating a 2D table where the cell at the ith row and jth column represents the minimum edit distance between the first i characters of the first string and the first j characters of the second string.
+
+6. **Coin Change**: Given an amount of money and a list of coin denominations, the goal is to find the minimum number of coins needed to make up the amount. This problem can be solved using dynamic programming by creating an array where the ith element represents the minimum number of coins needed to make up the amount i.
+
+7. **Matrix Chain Multiplication**: Given a chain of matrices, the goal is to find the most efficient way to multiply these matrices together. The problem is not actually to perform the multiplications, but merely to decide in which order to perform the multiplications. This problem can be solved using dynamic programming by creating a 2D table where the cell at the ith row and jth column represents the minimum number of scalar multiplications needed to multiply the ith through jth matrices.
+
+8. **Traveling Salesman Problem**: Given a list of cities and the distances between each pair of cities, the goal is to find the shortest possible route that visits each city exactly once and returns to the origin city. This problem can be solved using dynamic programming by creating a 2D table where the cell at the ith row and jth column represents the shortest possible route that visits each city in the jth subset of cities exactly once and ends at the ith city.
+
+9. **Floyd Warshall Algorithm**: This algorithm is used to find the shortest path between all pairs of vertices in a graph. It works by creating a 2D table where the cell at the ith row and jth column represents the shortest path from the ith vertex to the jth vertex.
