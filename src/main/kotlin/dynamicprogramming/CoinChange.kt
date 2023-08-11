@@ -12,6 +12,14 @@ package dynamicprogramming
 class CoinChange {
 
     fun coinChange(coins: IntArray, amount: Int): Int {
-
+        val max = amount + 1
+        val dp = IntArray(max) { max }
+        dp[0] = 0
+        for (coin in coins) {
+            for (i in coin until max) {
+                dp[i] = minOf(dp[i], dp[i - coin] + 1)
+            }
+        }
+        return if (dp[amount] > amount) -1 else dp[amount]
     }
 }
