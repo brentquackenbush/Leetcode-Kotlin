@@ -26,5 +26,5 @@ class ClimbingStairs {
 // Solution
 /**
  * @Time_Complexity: O(n) we are saving the summation of the last 2 values f(n-1) and f(n-2) in a linear fashion, by
- * using two variables. This is the fibonacci sequence. 
+ * using two variables. This is the fibonacci sequence.
  */
