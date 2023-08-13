@@ -1,4 +1,4 @@
-package kotlindatastructures
+package kotlindatastructures.stack
 
 class StackImpl<T: Any>: Stack<T> {
 

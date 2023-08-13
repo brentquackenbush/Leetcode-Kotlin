@@ -1,4 +1,4 @@
-package kotlindatastructures
+package kotlindatastructures.stack
 interface Stack<T: Any> {
 
     fun peek() : T?
