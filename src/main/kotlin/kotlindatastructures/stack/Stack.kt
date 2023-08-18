@@ -1,13 +1,13 @@
 package kotlindatastructures.stack
-interface Stack<T: Any> {
+interface Stack<T : Any> {
 
-    fun peek() : T?
+    fun peek(): T?
 
-    fun pop() : T?
+    fun pop(): T?
 
     fun push(element: T)
 
-    val count : Int
+    val count: Int
 
     val isEmpty: Boolean
         get() = count == 0

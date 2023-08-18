@@ -3,25 +3,22 @@ package slidingwindow
 class LengthOfLongestSubstring {
 
     fun solution(s: String): Int {
-
         val seen = mutableSetOf<Char>()
-        var lengthOfLongestSubstring = 0;
-        var start = 0;
+        var lengthOfLongestSubstring = 0
+        var start = 0
 
-        s.forEachIndexed{ index, c ->
-            if(seen.contains(c)) {
-                while(s[start] != c) {
+        s.forEachIndexed { index, c ->
+            if (seen.contains(c)) {
+                while (s[start] != c) {
                     seen.remove(s[start++])
                 }
                 start++
             }
             seen.add(c)
             lengthOfLongestSubstring = maxOf(lengthOfLongestSubstring, index - start + 1)
-
         }
         return lengthOfLongestSubstring
     }
-
 }
 /**
  * @Time_Complexity: O(n)

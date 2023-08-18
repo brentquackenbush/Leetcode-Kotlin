@@ -1,6 +1,6 @@
 package kotlindatastructures.stack
 
-class StackImpl<T: Any>: Stack<T> {
+class StackImpl<T : Any> : Stack<T> {
 
     private var storage = arrayListOf<T>()
 

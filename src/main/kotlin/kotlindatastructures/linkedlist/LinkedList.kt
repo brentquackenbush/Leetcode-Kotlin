@@ -8,12 +8,12 @@ class LinkedList<T : Any> {
         get() = head == null
 
     fun append(value: T) {
-        if(head == null) {
+        if (head == null) {
             head = Node(value)
             return
         }
         var current = head
-        while(current?.next != null) {
+        while (current?.next != null) {
             current = current.next
         }
         current?.next = Node(value)

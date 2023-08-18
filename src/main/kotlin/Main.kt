@@ -8,8 +8,8 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     val test = CoinChange()
     val amount = 12
-    val coinChange = intArrayOf(3,5,11)
+    val coinChange = intArrayOf(3, 5, 11)
 
-    val result = test.coinChange(coinChange,amount)
+    val result = test.coinChange(coinChange, amount)
     println(result)
 }

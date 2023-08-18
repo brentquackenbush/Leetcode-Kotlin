@@ -13,27 +13,25 @@ package dynamicprogramming
 class MaximumSubarray {
 
     companion object {
-        private val nums = mutableListOf(1,4,-2,-1,5)
+        private val nums = mutableListOf(1, 4, -2, -1, 5)
     }
 
     fun maxSubArray(nums: IntArray): Int {
-
         var maxSum = nums[0]
         var currentSum = nums[0]
         // iterate through the entire array and using a variable to keep track of the current sum, find the maximum sum
         // by holding checking every value if it is greater than the current maximum sum
         // maxOf I believe is the idiotmatic Kotlin way of Math.max in Java.
-        for(i in 1 until nums.size) {
+        for (i in 1 until nums.size) {
             currentSum = maxOf(nums[i], currentSum + nums[i])
-            if(currentSum > maxSum) {
+            if (currentSum > maxSum) {
                 maxSum = currentSum
             }
         }
         return maxSum
     }
-
 }
-//Solution
+// Solution
 /**
  * @Time_Complexity: O(n) linear time. We are making one pass through the array with no stops. We are using a variable
  * to keep track of the maximum sum by comparing the maximum sum variable to itself and the current aggregate sum.

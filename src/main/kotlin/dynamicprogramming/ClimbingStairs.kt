@@ -8,13 +8,13 @@ package dynamicprogramming
  */
 class ClimbingStairs {
 
-    fun climbStairs(n: Int) : Int {
-        if(n == 1) return 1
+    fun climbStairs(n: Int): Int {
+        if (n == 1) return 1
 
         var prev1 = 1
         var prev2 = 2
 
-        for(i in 3..n) {
+        for (i in 3..n) {
             val newValue = prev1 + prev2
             prev1 = prev2
             prev2 = newValue
