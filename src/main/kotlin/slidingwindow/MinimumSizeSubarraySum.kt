@@ -15,16 +15,16 @@ class MinimumSizeSubarraySum {
         var minimimalSubarrayLength = Int.MAX_VALUE
         var windowStart = 0
         var currentSum = 0
-        for(windowEnd in nums.indices) {
+        for (windowEnd in nums.indices) {
             currentSum += nums[windowEnd]
 
-            while(currentSum >= target) {
+            while (currentSum >= target) {
                 minimimalSubarrayLength = minOf(minimimalSubarrayLength, windowEnd - windowStart + 1)
                 currentSum -= nums[windowStart++]
             }
         }
 
-        return if(minimimalSubarrayLength == Int.MAX_VALUE) 0 else minimimalSubarrayLength
+        return if (minimimalSubarrayLength == Int.MAX_VALUE) 0 else minimimalSubarrayLength
     }
 }
 /**

@@ -10,12 +10,13 @@ import kotlin.test.assertEquals
  */
 class SubarraysWithKDifferentTest {
 
-    val nums = intArrayOf(1,2,1,1,2,2)
+    val nums = intArrayOf(1, 2, 1, 1, 2, 2)
 
     val subject = SubarraysWithKDifferent()
+
     @Test
     fun testEfficientSolution() {
-        val result = subject.subarraysWithKDistinct(nums,2)
+        val result = subject.subarraysWithKDistinct(nums, 2)
 
         assertEquals(13, result)
     }
