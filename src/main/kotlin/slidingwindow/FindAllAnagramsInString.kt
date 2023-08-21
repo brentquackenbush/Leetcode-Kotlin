@@ -23,10 +23,11 @@ class FindAllAnagramsInString {
         val result = mutableListOf<Int>()
         val pSorted = p.toCharArray().sorted()
 
-        for(i in 0..s.length - p.length) {
+        for (i in 0..s.length - p.length) {
             val sub = s.substring(i, i + p.length).toCharArray().sorted()
-            if(sub == pSorted)
+            if (sub == pSorted) {
                 result.add(i)
+            }
         }
         return result
     }
@@ -36,15 +37,15 @@ class FindAllAnagramsInString {
         val pCounts = IntArray(26)
         val sCounts = IntArray(26)
 
-        for(char in p) {
+        for (char in p) {
             pCounts[char - 'a']++
         }
 
         var windowStart = 0
-        for(windowEnd in s.indices) {
+        for (windowEnd in s.indices) {
             sCounts[s[windowEnd] - 'a']++
-            if(windowEnd - windowStart + 1 == p.length) {
-                if(pCounts.contentEquals(sCounts)) {
+            if (windowEnd - windowStart + 1 == p.length) {
+                if (pCounts.contentEquals(sCounts)) {
                     result.add(windowStart)
                 }
                 sCounts[s[windowStart] - 'a']--
@@ -53,7 +54,6 @@ class FindAllAnagramsInString {
         }
         return result
     }
-
 }
 // Solution
 /**
