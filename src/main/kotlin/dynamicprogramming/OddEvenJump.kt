@@ -22,12 +22,21 @@ class OddEvenJump {
         var goodStartingIndices = 1 // Last index is always good
 
         for (i in n - 2 downTo 0) {
+            /**
+             * ceilingEntry(key): This returns the smallest key-value mapping whose key is greater than or equal to the
+             * specified key. In our problem, we use this method during the odd-numbered jumps to find the next index
+             * to jump to. Because the keys are the array values and the values are their indices, we can find the next
+             * index to jump to in logarithmic time.
+             */
             // Odd-numbered jump
             val oddJump = treeMap.ceilingEntry(arr[i])
             if (oddJump != null) {
                 canReachEndOdd[i] = canReachEndEven[oddJump.value]
             }
-
+            /**
+             * floorEntry(key): This returns the largest key-value mapping whose key is less than or equal to the
+             * specified key. We use this during the even-numbered jumps for the same purpose as ceilingEntry.
+             */
             // Even-numbered jump
             val evenJump = treeMap.floorEntry(arr[i])
             if (evenJump != null) {
