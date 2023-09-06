@@ -28,10 +28,9 @@ package stringmanipulation
 class UniqueEmailAddresses {
 
     fun solution(emails: Array<String>): Int {
-
         val uniqueEmails = mutableSetOf<String>()
 
-        emails.forEach {email ->
+        emails.forEach { email ->
             val (localName, domainName) = email.split('@')
             val canonicalEmail = localName
                 .takeWhile { it != '+' }
