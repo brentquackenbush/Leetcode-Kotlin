@@ -25,5 +25,6 @@ class MultiplyStrings {
 }
 // Solution
 /**
- * @Time_Complexity=Medium
+ * @Time_Complexity=O(m * n)
+ * m = length of num1 n = length of num2
  */
