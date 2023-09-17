@@ -10,8 +10,8 @@ class PlusOne {
     fun solution(arr: IntArray): IntArray {
         val n = arr.size
 
-        for(i in n - 1 downTo 0) {
-            if(arr[i] < 9) {
+        for (i in n - 1 downTo 0) {
+            if (arr[i] < 9) {
                 arr[i]++
                 return arr
             }

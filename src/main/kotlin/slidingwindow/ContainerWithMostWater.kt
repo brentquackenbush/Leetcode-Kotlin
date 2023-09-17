@@ -6,17 +6,16 @@ package slidingwindow
 class ContainerWithMostWater {
 
     fun containerWithMostWater(height: IntArray): Int {
-
         var max = 0
         var left = 0
         var right = 0
-        while(left < right) {
-            if(height[right] > height[left]) {
+        while (left < right) {
+            if (height[right] > height[left]) {
                 max = maxOf(max, minOf(height[right], height[left]) * right - left)
                 left++
             } else {
                 max = maxOf(max, minOf(height[right], height[left]) * right - left)
-                 right--
+                right--
             }
         }
         return max

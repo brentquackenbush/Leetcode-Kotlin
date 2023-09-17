@@ -15,8 +15,8 @@ class JumpGame {
      */
     fun solution(nums: IntArray): Boolean {
         var lastPos = nums.size - 1
-        for(i in lastPos downTo 0) {
-            if(i + nums[i] >= lastPos) {
+        for (i in lastPos downTo 0) {
+            if (i + nums[i] >= lastPos) {
                 lastPos = i
             }
         }
