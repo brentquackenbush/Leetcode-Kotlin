@@ -7,7 +7,7 @@ package bst
 class MaxPathSum {
 
 }
-class TreeNode(var `val`: Long) {
+class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null
 }
