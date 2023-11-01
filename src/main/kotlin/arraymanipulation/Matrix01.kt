@@ -3,7 +3,7 @@ package arraymanipulation
 import java.util.*
 
 /**
- * [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
+ * [542. 01 Matrix](   )
  *
  * @Difficulty=Medium
  */
