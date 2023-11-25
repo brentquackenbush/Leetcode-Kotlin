@@ -35,6 +35,27 @@ class MaximumLevelSumOfBinaryTree {
         }
         return maxLevel
     }
+
+    // Pre-order traversal
+    fun maxLevelSumDfs(root: TreeNode?): Int {
+        val levelSums = mutableListOf<Int>()
+        dfs(root, 0, levelSums)
+
+        return levelSums.indices.maxByOrNull { levelSums[it] }!! + 1
+    }
+
+    fun dfs(node: TreeNode?, level: Int, levelSums: MutableList<Int>) {
+        if (node == null) return
+
+        if (levelSums.size <= level) {
+            levelSums.add(node.`val`)
+        } else {
+            levelSums[level] += node.`val`
+        }
+
+        dfs(node.left, level + 1, levelSums)
+        dfs(node.right, level + 1, levelSums)
+    }
 }
 // Solution
 /**
