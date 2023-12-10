@@ -40,4 +40,10 @@ class WordLadder {
 // Solution
 /**
  * @Time_Complexity=O(N * L^2)
+ *
+ * What did I learn from solving this problem?
+ *
+ * This problem reinforces that usually shortest path/transformation problems are solved using Breadth First Search
+ * The template of this problem is the same using BFS. Create a Queue. While loop until queue is not empty. For loop
+ * for traversing its neighbors.
  */
