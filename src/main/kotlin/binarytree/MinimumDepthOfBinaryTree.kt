@@ -27,13 +27,13 @@ class MinimumDepthOfBinaryTree {
         return depth
     }
 
-    fun minDepthDfs(root: TreeNode?): Int {
-        if(root == null) return 0
-        var left = minDepth(root.left)
-        var right = minDepth(root.right)
-
-        return if(left == 0 || right == 0) left + right + 1 else minOf(left,right) + 1
-    }
+//    fun minDepthDfs(root: TreeNode?): Int {
+//        if(root == null) return 0
+//        var left = minDepth(root.left)
+//        var right = minDepth(root.right)
+//
+//        return if(left == 0 || right == 0) left + right + 1 else minOf(left,right) + 1
+//    }
 }
 // Solution
 /**
