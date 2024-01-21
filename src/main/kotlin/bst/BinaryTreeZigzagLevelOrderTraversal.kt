@@ -1,4 +1,3 @@
 package bst
 
-class BinaryTreeZigzagLevelOrderTraversal {
-}
+class BinaryTreeZigzagLevelOrderTraversal

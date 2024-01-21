@@ -6,14 +6,14 @@ class MissingRanges {
         val resultRange = mutableListOf<List<Int>>()
         var current = lower
 
-        if(nums.isEmpty()) {
+        if (nums.isEmpty()) {
             resultRange.add(listOf(lower, upper))
             return resultRange
         }
 
-        for(num in nums) {
-            if(current < num) {
-                if(current == num - 1) {
+        for (num in nums) {
+            if (current < num) {
+                if (current == num - 1) {
                     resultRange.add(listOf(current, current))
                 } else {
                     resultRange.add(listOf(current, num - 1))
@@ -21,13 +21,13 @@ class MissingRanges {
             }
             current = num + 1
 
-            if(current > upper) {
+            if (current > upper) {
                 break
             }
         }
 
-        if(current <= upper) {
-            if(current == upper) {
+        if (current <= upper) {
+            if (current == upper) {
                 resultRange.add(listOf(current, current))
             } else {
                 resultRange.add(listOf(current, upper))
@@ -36,5 +36,4 @@ class MissingRanges {
 
         return resultRange
     }
-
 }

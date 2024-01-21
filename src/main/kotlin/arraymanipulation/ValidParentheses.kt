@@ -8,14 +8,13 @@ package arraymanipulation
 class ValidParentheses {
 
     fun isValid(s: String): Boolean {
-
         val stack = ArrayDeque<Char>()
-        for(ch in s) {
-            when(ch) {
+        for (ch in s) {
+            when (ch) {
                 '(', '{', '[' -> stack.addLast(ch)
-                ')' -> if(stack.isEmpty() || stack.removeFirst() != '(') return false
-                '}' -> if(stack.isEmpty() || stack.removeFirst() != '{') return false
-                ']' -> if(stack.isEmpty() || stack.removeFirst() != '[') return false
+                ')' -> if (stack.isEmpty() || stack.removeFirst() != '(') return false
+                '}' -> if (stack.isEmpty() || stack.removeFirst() != '{') return false
+                ']' -> if (stack.isEmpty() || stack.removeFirst() != '[') return false
             }
         }
         return stack.isEmpty()

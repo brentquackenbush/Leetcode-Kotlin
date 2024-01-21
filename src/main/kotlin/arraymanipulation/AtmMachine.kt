@@ -11,7 +11,7 @@ class AtmMachine {
     private val atmBanknotesCount = IntArray(5) { 0 }
 
     fun deposit(banknotesCount: IntArray) {
-        for(i in banknotesCount.indices) {
+        for (i in banknotesCount.indices) {
             atmBanknotesCount[i] = atmBanknotesCount[i] + banknotesCount[i]
         }
     }
@@ -20,17 +20,16 @@ class AtmMachine {
         val result = IntArray(5) { 0 }
         var remainingAmount = amount
 
-        for(i in atmBanknotesCount.indices.reversed()) {
+        for (i in atmBanknotesCount.indices.reversed()) {
             val count = minOf(remainingAmount / bankNotes[i], atmBanknotesCount[i])
             remainingAmount -= count * bankNotes[i]
             result[i] = count
         }
 
-        return if(remainingAmount > 0) {
+        return if (remainingAmount > 0) {
             intArrayOf(-1)
         } else {
-
-            for(i in result.indices) {
+            for (i in result.indices) {
                 atmBanknotesCount[i] = atmBanknotesCount[i] - result[i]
             }
 

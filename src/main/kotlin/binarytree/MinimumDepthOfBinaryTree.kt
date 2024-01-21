@@ -8,19 +8,18 @@ import bst.TreeNode
  */
 class MinimumDepthOfBinaryTree {
     fun minDepthBfs(root: TreeNode?): Int {
-        if(root == null) return 0
+        if (root == null) return 0
         var depth = 1
         val queue = ArrayDeque<TreeNode>()
         queue.add(root)
-        while(queue.isNotEmpty()) {
+        while (queue.isNotEmpty()) {
             val levelSize = queue.size
-            for(i in 0 until levelSize) {
+            for (i in 0 until levelSize) {
                 val node = queue.removeFirst()
-                if(node.left == null && node.right == null) return depth
+                if (node.left == null && node.right == null) return depth
 
                 node.left?.let { queue.add(it) }
                 node.right?.let { queue.add(it) }
-
             }
             depth++
         }

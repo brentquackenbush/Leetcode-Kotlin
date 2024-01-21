@@ -13,21 +13,22 @@ class LowestCommonAncestorIII {
         val ancestors = mutableSetOf<Node>()
 
         var current = p
-        while(current != null) {
+        while (current != null) {
             ancestors.add(current)
             current = current.parent
         }
 
         current = q
-        while(current != null) {
-            if(ancestors.contains(current)) return current
+        while (current != null) {
+            if (ancestors.contains(current)) return current
             current = current.parent
         }
 
         return null
     }
+
     // Definition for a Node.
-      data class Node(var `val`: Int) {
+    data class Node(var `val`: Int) {
         var left: TreeNode? = null
         var right: TreeNode? = null
         var parent: Node? = null

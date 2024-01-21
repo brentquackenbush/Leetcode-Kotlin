@@ -18,7 +18,6 @@ package arraymanipulation
  */
 class ValidSoduku {
     fun isValidSudoku(board: Array<CharArray>): Boolean {
-
         // Keep track of the rows
         // Keep track of the columns
         // Keep track of the 3 by 3 indexed boxes.
@@ -27,12 +26,12 @@ class ValidSoduku {
         val col = Array(9) { HashSet<Char>() }
         val boxes = Array(9) { HashSet<Char>() }
 
-        for(i in 0 until board.size) {
-            for(j in 0 until board[0].size) {
+        for (i in 0 until board.size) {
+            for (j in 0 until board[0].size) {
                 val num = board[i][j]
-                if(num != '.') {
+                if (num != '.') {
                     var boxIndex = (i / 3) * 3 + (j / 3)
-                    if(num in rows[i] || num in col[j] || num in boxes[boxIndex]) {
+                    if (num in rows[i] || num in col[j] || num in boxes[boxIndex]) {
                         return false
                     }
 

@@ -27,12 +27,12 @@ class SpiralMatrix {
             if (left > right || top > bottom) break
 
             // Go left
-            for (i in right downTo left) result.add(matrix[bottom][i])  // corrected the loop
+            for (i in right downTo left) result.add(matrix[bottom][i]) // corrected the loop
             bottom--
             if (left > right || top > bottom) break
 
             // Go up
-            for (i in bottom downTo top) result.add(matrix[i][left])  // corrected the loop
+            for (i in bottom downTo top) result.add(matrix[i][left]) // corrected the loop
             left++
             if (left > right || top > bottom) break
         }

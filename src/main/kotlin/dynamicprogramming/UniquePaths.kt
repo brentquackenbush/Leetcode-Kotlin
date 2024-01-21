@@ -10,8 +10,11 @@ class UniquePaths {
         val line = IntArray(n) { 1 }
         for (i in 0 until m - 1) {
             for (j in 0 until n) {
-                if (j == 0) line[j] = 1
-                else line[j] = line[j-1] + line[j]
+                if (j == 0) {
+                    line[j] = 1
+                } else {
+                    line[j] = line[j - 1] + line[j]
+                }
             }
         }
 

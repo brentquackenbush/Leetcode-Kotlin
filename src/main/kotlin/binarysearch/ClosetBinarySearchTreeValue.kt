@@ -13,12 +13,12 @@ class ClosetBinarySearchTreeValue {
         var closetValue = root?.`val` ?: return -1
         var current = root
 
-        while(current != null) {
-            if(abs(target - current.`val`) < abs(target - closetValue) || (abs(target - current.`val`) == abs(target - closetValue) && current.`val` < closetValue)) {
+        while (current != null) {
+            if (abs(target - current.`val`) < abs(target - closetValue) || (abs(target - current.`val`) == abs(target - closetValue) && current.`val` < closetValue)) {
                 closetValue = current.`val`
             }
 
-            current = if(current.`val` > target) {
+            current = if (current.`val` > target) {
                 current.left
             } else {
                 current.right

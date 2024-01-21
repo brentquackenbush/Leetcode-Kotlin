@@ -11,16 +11,16 @@ class BinaryTreeRightSideView {
 
     fun rightSideViewBfs(root: TreeNode?): List<Int> {
         val rightSideViewList = mutableListOf<Int>()
-        if(root == null) return rightSideViewList
+        if (root == null) return rightSideViewList
 
         val queue = ArrayDeque<TreeNode>()
         queue.add(root)
 
-        while(queue.isNotEmpty()) {
+        while (queue.isNotEmpty()) {
             val levelSize = queue.size
-            for(i in 0 until levelSize) {
+            for (i in 0 until levelSize) {
                 val node = queue.removeFirst()
-                if(i == 0) {
+                if (i == 0) {
                     rightSideViewList.add(node.`val`)
                 }
 
@@ -31,8 +31,6 @@ class BinaryTreeRightSideView {
 
         return rightSideViewList
     }
-
-
 }
 // Solution
 /**

@@ -18,8 +18,11 @@ class LongestIncreasingSubsequence {
             var j = size
             while (i != j) {
                 val m = (i + j) / 2
-                if (tails[m] < x) i = m + 1
-                else j = m
+                if (tails[m] < x) {
+                    i = m + 1
+                } else {
+                    j = m
+                }
             }
             tails[i] = x
             if (i == size) size++

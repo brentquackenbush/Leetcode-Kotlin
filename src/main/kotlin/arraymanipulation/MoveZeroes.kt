@@ -6,11 +6,11 @@ package arraymanipulation
  * @Difficulty=Easy
  */
 class MoveZeroes {
-    fun moveZeroes(nums: IntArray): Unit {
+    fun moveZeroes(nums: IntArray) {
         var leftMostZeroIndex = 0
-        for(i in 0 until nums.size) {
-            if(nums[i] != 0) {
-                if(i > leftMostZeroIndex) {
+        for (i in 0 until nums.size) {
+            if (nums[i] != 0) {
+                if (i > leftMostZeroIndex) {
                     nums[leftMostZeroIndex] = nums[i]
                     nums[i] = 0
                 }

@@ -13,20 +13,24 @@ class NextClosestTime {
         fun getTime(h2: Int = H2, h1: Int = H1, m2: Int = M2, m1: Int = M1) = "$h2$h1:$m2$m1"
 
         digits.forEach {
-            if (it in (M1 + 1)..9)
+            if (it in (M1 + 1)..9) {
                 return getTime(m1 = it)
+            }
         }
         digits.forEach {
-            if (it in (M2 + 1)..5)
+            if (it in (M2 + 1)..5) {
                 return getTime(m2 = it, m1 = digits.first())
+            }
         }
         digits.forEach {
-            if ((H2 in 0..1 && it in (H1 + 1)..9) || (H2 == 2 && it in (H1 + 1)..3))
+            if ((H2 in 0..1 && it in (H1 + 1)..9) || (H2 == 2 && it in (H1 + 1)..3)) {
                 return getTime(h1 = it, m2 = digits.first(), m1 = digits.first())
+            }
         }
         digits.forEach {
-            if (it in (H2 + 1)..2)
+            if (it in (H2 + 1)..2) {
                 return getTime(h2 = it, h1 = digits.first(), m2 = digits.first(), m1 = digits.first())
+            }
         }
         return getTime(h2 = digits.first(), h1 = digits.first(), m2 = digits.first(), m1 = digits.first())
     }

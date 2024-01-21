@@ -11,7 +11,7 @@ class DiameterOfBinaryTree {
         var diameter = 0
 
         fun depth(root: TreeNode?): Int {
-            if(root == null) return 0
+            if (root == null) return 0
 
             val leftDepth = depth(root.left)
             val rightDepth = depth(root.right)

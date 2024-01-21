@@ -14,15 +14,15 @@ class CloneGraph {
         val graph = mutableMapOf<Node, Node>()
 
         fun dfs(node: Node?): Node? {
-            if(node == null) return null
+            if (node == null) return null
 
-            if(graph.containsKey(node)) {
+            if (graph.containsKey(node)) {
                 return graph[node]
             }
 
             val nodeCopy = Node(node.`val`)
             graph[node] = nodeCopy
-            for(neighbor in node.neighbors) {
+            for (neighbor in node.neighbors) {
                 nodeCopy.neighbors.add(dfs(neighbor))
             }
 

@@ -12,10 +12,10 @@ class BuildingsWithAnOceanView {
         val oceanViews = mutableListOf<Int>()
         oceanViews.add(n)
 
-        if(n == 0) return oceanViews.toIntArray()
+        if (n == 0) return oceanViews.toIntArray()
 
-        for(i in n - 1 downTo 0) {
-            if(heights[i] > currentTallestBuilding) {
+        for (i in n - 1 downTo 0) {
+            if (heights[i] > currentTallestBuilding) {
                 oceanViews.add(i)
                 currentTallestBuilding = heights[i]
             }

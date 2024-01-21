@@ -3,8 +3,7 @@
  *
  * @Difficulty=
  */
-class Example {
-}
+class Example
 // Solution
 /**
  * @Time_Complexity=

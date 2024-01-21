@@ -13,9 +13,9 @@ class AverageofLevelsinBinaryTree {
         val count = mutableListOf<Int>()
 
         fun dfs(node: TreeNode?, level: Int) {
-            if(node == null) return
+            if (node == null) return
 
-            if(level < sum.size) {
+            if (level < sum.size) {
                 sum[level] = sum[level] + node.`val`
                 count[level] = count[level] + 1
             } else {
@@ -38,10 +38,10 @@ class AverageofLevelsinBinaryTree {
         root ?: return averageValueAtEachLevel.toDoubleArray()
 
         queue.add(root)
-        while(queue.isNotEmpty()) {
+        while (queue.isNotEmpty()) {
             val levelSize = queue.size
             var sum: Double = 0.0
-            for(i in 0 until levelSize) {
+            for (i in 0 until levelSize) {
                 val node = queue.removeFirst()
                 sum += node.`val`
 

@@ -12,12 +12,12 @@ class ValidateBST {
     }
 
     fun isValidBSTSolver(root: TreeNode?, min: Long, max: Long): Boolean {
-        if(root == null) return true
+        if (root == null) return true
 
-        if(root.`val` <= min || root.`val` >= max) return false
+        if (root.`val` <= min || root.`val` >= max) return false
 
         return isValidBSTSolver(root.left, min, root.`val`.toLong()) &&
-                isValidBSTSolver(root.right, root.`val`.toLong(), max)
+            isValidBSTSolver(root.right, root.`val`.toLong(), max)
     }
 }
 /**

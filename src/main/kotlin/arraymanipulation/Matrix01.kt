@@ -15,7 +15,7 @@ class Matrix01 {
     fun updateMatrix(mat: Array<IntArray>): Array<IntArray> {
         val rows = mat.size
         val cols = mat[0].size
-        val result = Array(rows) { IntArray(cols) { Int.MAX_VALUE - 1 } }  // Initialize with large values
+        val result = Array(rows) { IntArray(cols) { Int.MAX_VALUE - 1 } } // Initialize with large values
 
         // First pass: check for left and top neighbors
         for (i in 0 until rows) {

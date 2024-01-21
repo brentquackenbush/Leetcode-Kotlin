@@ -7,10 +7,10 @@ class IsSymmetric {
     }
 
     fun isSymmetricSolver(t1: TreeNode?, t2: TreeNode?): Boolean {
-        if(t1 == null && t2 == null) return true
-        if(t1 == null || t2 == null) return false
+        if (t1 == null && t2 == null) return true
+        if (t1 == null || t2 == null) return false
 
-        return if(t1.`val` == t2.`val`) isSymmetricSolver(t1.left, t2.right) && isSymmetricSolver(t1.right, t2.left) else false
+        return if (t1.`val` == t2.`val`) isSymmetricSolver(t1.left, t2.right) && isSymmetricSolver(t1.right, t2.left) else false
     }
 
     fun isSymmetricIterative(root: TreeNode?): Boolean {

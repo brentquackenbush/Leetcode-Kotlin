@@ -25,7 +25,7 @@ class BSTIterator(root: TreeNode?) {
 
     fun next(): Int {
         val currentNode = stack.removeLast()
-        if(currentNode.right != null) {
+        if (currentNode.right != null) {
             pushAllLeft(currentNode.right)
         }
         return currentNode.`val`
@@ -37,7 +37,7 @@ class BSTIterator(root: TreeNode?) {
 
     private fun pushAllLeft(root: TreeNode?) {
         var currentNode = root
-        while(currentNode != null) {
+        while (currentNode != null) {
             stack.addLast(currentNode)
             currentNode = currentNode.left
         }

@@ -11,16 +11,16 @@ class BestTimeToBuyAndSellStock {
         // Keep track of maximum profit
         var minPrice = prices[0]
         var maxProfit = Int.MIN_VALUE
-        for(i in 1 until prices.size) {
-            if(prices[i] < minPrice) {
+        for (i in 1 until prices.size) {
+            if (prices[i] < minPrice) {
                 minPrice = prices[i]
             } else {
-                if(prices[i] - minPrice > maxProfit) {
+                if (prices[i] - minPrice > maxProfit) {
                     maxProfit = prices[i] - minPrice
                 }
             }
         }
-        return if(maxProfit <= 0) return 0 else maxProfit
+        return if (maxProfit <= 0) return 0 else maxProfit
     }
 }
 // Solution

@@ -6,7 +6,7 @@ package arraymanipulation
  * @Difficulty=Medium
  */
 class NextPermutation {
-    fun nextPermutation(nums: IntArray): Unit {
+    fun nextPermutation(nums: IntArray) {
         var i = nums.size - 2
 
         // Step 1: Find the first pair (i, i+1) such that nums[i] < nums[i+1]

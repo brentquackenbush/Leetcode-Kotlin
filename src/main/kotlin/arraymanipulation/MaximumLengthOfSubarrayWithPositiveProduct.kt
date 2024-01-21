@@ -8,38 +8,37 @@ package arraymanipulation
 class MaximumLengthOfSubarrayWithPositiveProduct {
 
     fun getMaxLen(nums: IntArray): Int {
-
         var negCount = 0
         var curLen = 0
         var maxLen = 0
 
-        for(i in nums.indices) {
-            if(nums[i] > 0) {
+        for (i in nums.indices) {
+            if (nums[i] > 0) {
                 curLen++
-            } else if(nums[i] < 0) {
+            } else if (nums[i] < 0) {
                 curLen++
                 negCount++
             } else {
                 curLen = 0
                 negCount = 0
             }
-            if(negCount % 2 == 0) maxLen = maxOf(maxLen, curLen)
+            if (negCount % 2 == 0) maxLen = maxOf(maxLen, curLen)
         }
 
         curLen = 0
         negCount = 0
 
-        for(i in nums.indices.reversed()) {
-            if(nums[i] > 0) {
+        for (i in nums.indices.reversed()) {
+            if (nums[i] > 0) {
                 curLen++
-            } else if(nums[i] < 0) {
+            } else if (nums[i] < 0) {
                 negCount++
                 curLen++
             } else {
                 curLen = 0
                 negCount = 0
             }
-            if(negCount % 2 == 0) maxLen = maxOf(maxLen, curLen)
+            if (negCount % 2 == 0) maxLen = maxOf(maxLen, curLen)
         }
 
         return maxLen

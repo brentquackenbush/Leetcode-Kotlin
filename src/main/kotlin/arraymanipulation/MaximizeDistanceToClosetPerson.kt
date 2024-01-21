@@ -8,22 +8,20 @@ package arraymanipulation
 class MaximizeDistanceToClosetPerson {
 
     fun maxDistToClosest(seats: IntArray): Int {
-
         var first = 0
         var last = 0
-        while(seats[last] != 1) last++
+        while (seats[last] != 1) last++
         var maxLength = last
-        for(i in 0 until seats.size) {
-            if(seats[i] == 1) {
+        for (i in 0 until seats.size) {
+            if (seats[i] == 1) {
                 first = last
                 last = i
-                maxLength = maxOf(maxLength, (last - first)/2)
+                maxLength = maxOf(maxLength, (last - first) / 2)
             }
         }
         maxLength = maxOf(maxLength, seats.size - last - 1)
         return maxLength
     }
-
 }
 // Solution
 /**

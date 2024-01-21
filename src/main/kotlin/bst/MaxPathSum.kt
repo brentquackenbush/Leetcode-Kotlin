@@ -4,9 +4,7 @@ package bst
  *
  * @Difficulty=Hard
  */
-class MaxPathSum {
-
-}
+class MaxPathSum
 class TreeNode(var `val`: Int) {
     var left: TreeNode? = null
     var right: TreeNode? = null

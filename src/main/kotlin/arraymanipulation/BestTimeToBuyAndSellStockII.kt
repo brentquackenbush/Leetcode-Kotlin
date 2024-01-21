@@ -9,9 +9,9 @@ class BestTimeToBuyAndSellStockII {
 
     fun maxProfit(prices: IntArray): Int {
         var result = 0
-        for(i in 1 until prices.size) {
-            if(prices[i] > prices[i-1]) {
-                result+= (prices[i] - prices[i-1])
+        for (i in 1 until prices.size) {
+            if (prices[i] > prices[i - 1]) {
+                result += (prices[i] - prices[i - 1])
             }
         }
         return result

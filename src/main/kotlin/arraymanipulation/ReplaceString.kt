@@ -8,12 +8,10 @@ package arraymanipulation
 class ReplaceString {
 
     fun findReplaceString(s: String, indices: IntArray, sources: Array<String>, targets: Array<String>): String {
-
         val replacements = indices.indices.sortedByDescending { indices[it] }
         val result = StringBuilder(s)
 
         for (i in replacements) {
-
             val source = sources[i]
             val target = targets[i]
             val index = indices[i]
@@ -21,7 +19,6 @@ class ReplaceString {
             if (s.substring(index).startsWith(source)) {
                 result.replace(index, index + source.length, target)
             }
-
         }
 
         return result.toString()

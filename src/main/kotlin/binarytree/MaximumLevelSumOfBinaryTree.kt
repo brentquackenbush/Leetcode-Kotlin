@@ -17,17 +17,17 @@ class MaximumLevelSumOfBinaryTree {
         var maxSum = root.`val`
         var maxLevel = levelCounter
 
-        while(queue.isEmpty()) {
+        while (queue.isEmpty()) {
             val levelSize = queue.size
             var levelSum = 0
-            for(i in 0 until levelSize) {
+            for (i in 0 until levelSize) {
                 val node = queue.removeFirst()
                 levelSum += node.`val`
 
                 node.left?.let { queue.add(it) }
                 node.right?.let { queue.add(it) }
             }
-            if(maxSum < levelSum) {
+            if (maxSum < levelSum) {
                 maxLevel = levelCounter
                 maxSum = levelSum
             }
