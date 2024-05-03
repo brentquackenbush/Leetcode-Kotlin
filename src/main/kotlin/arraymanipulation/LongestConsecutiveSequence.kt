@@ -8,14 +8,14 @@ package arraymanipulation
 class LongestConsecutiveSequence {
 
     fun longestConsecutive(nums: IntArray): Int {
-        if(nums.isEmpty()) return 0
+        if (nums.isEmpty()) return 0
         val set = nums.toSet()
         var maxCount = 1
-        for(num in set) {
-            if(!set.contains(num - 1)) {
+        for (num in set) {
+            if (!set.contains(num - 1)) {
                 var curCount = 1
                 var curNum = num
-                while(set.contains(curNum + 1)) {
+                while (set.contains(curNum + 1)) {
                     curCount++
                     curNum++
                 }
