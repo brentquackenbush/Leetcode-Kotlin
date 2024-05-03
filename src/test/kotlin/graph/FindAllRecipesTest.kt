@@ -10,9 +10,9 @@ class FindAllRecipesTest {
 
     @Test
     fun goodExampleToLearn() {
-        val recipes: Array<String> = arrayOf("bread","sandwich","burger")
+        val recipes: Array<String> = arrayOf("burger", "sandwich", "bread")
         val ingredients: List<List<String>> = listOf(
-            listOf("yeast","flour"),listOf("bread","meat"),listOf("sandwich","meat" ,"bread"))
+            listOf("sandwich","meat" ,"bread"),listOf("bread","meat"),listOf("yeast","flour"))
 
         val supplies: Array<String> = arrayOf("yeast","flour","meat")
 
